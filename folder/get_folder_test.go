@@ -60,7 +60,7 @@ func Test_folder_GetFoldersByOrgID(t *testing.T) {
 		},
 	}
 	for _, tt := range tests {
-		tt := tt
+		tt := tt // ensures correct value in closure (anonymous function)
 		t.Run(tt.name, func(t *testing.T) {
 			f := folder.NewDriver(tt.folders)
 
